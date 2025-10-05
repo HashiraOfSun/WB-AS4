@@ -9,7 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css" />
   <style>
-    /* Part 1 — Task 2: Card group using ONLY CSS (no Bootstrap) */
+    
     .mq-container { max-width: 1100px; margin: 0 auto; padding: 1rem; }
     .mq-cards { display: grid; grid-template-columns: 1fr; gap: 1rem; }
     .mq-card { border: 1px solid #e5e7eb; border-radius: 14px; padding: 1rem; box-shadow: 0 4px 16px rgba(0,0,0,0.06); }
@@ -17,11 +17,11 @@
     .mq-card h3 { margin: 0.5rem 0 0.25rem; font-size: 1.125rem; }
     .mq-card p { margin: 0; color: #4b5563; }
 
-    /* Tablet: 2 per row */
+    
     @media (min-width: 640px) {
       .mq-cards { grid-template-columns: repeat(2, 1fr); }
     }
-    /* Desktop: 3 per row */
+    
     @media (min-width: 1024px) {
       .mq-cards { grid-template-columns: repeat(3, 1fr); }
     }
@@ -36,7 +36,7 @@
   </header>
 
   <main class="mq-container">
-    <!-- Task 1: Responsive Typography -->
+    
     <section aria-labelledby="typography">
       <h2 id="typography">Task 1 — Responsive Typography</h2>
       <p class="lead">Resize the viewport to see font sizes adapt for mobile, tablet, and desktop.</p>
@@ -46,7 +46,7 @@
       <p>Mauris porta, lorem a facilisis ultrices, mi odio feugiat dui, vitae feugiat turpis odio at ante.</p>
     </section>
 
-    <!-- Task 2: Card group (no Bootstrap) -->
+
     <section aria-labelledby="cards">
       <h2 id="cards">Task 2 — Card Group (No Bootstrap)</h2>
       <div class="mq-cards" role="list">
