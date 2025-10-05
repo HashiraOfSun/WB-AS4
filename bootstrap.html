@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Assignment 4 — Bootstrap</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <!-- Task 5: Bootstrap Navbar with proper semantics -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary" aria-label="Main navigation">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">MySite</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="bootstrap.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="media-queries.html">About us</a></li>
+          <li class="nav-item"><a class="nav-link" href="#categories">Categories</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Task 3: Grid Layout -->
+    <section class="py-4">
+      <div class="container">
+        <h1 class="h2 mb-4">Part 2 — Bootstrap Grid & Utilities</h1>
+        <div class="row g-4 align-items-stretch">
+          <div class="col-sm-12 col-md-6 col-lg-6">
+            <div class="p-3 p-md-4 rounded-4 shadow-sm bg-light h-100">
+              <h2 class="h4">Two-Column Section (col-lg-6)</h2>
+              <p class="mb-0">This column scales using <code>col-sm</code>, <code>col-md</code>, and <code>col-lg</code> classes.</p>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-6">
+            <div class="p-3 p-md-4 rounded-4 shadow-sm bg-white h-100">
+              <h2 class="h4">Second Column</h2>
+              <p class="mb-0">Uses Bootstrap’s container and spacing utilities instead of custom CSS.</p>
+            </div>
+          </div>
+        </div>
+        <div class="row g-4 align-items-stretch mt-1 mt-lg-4">
+          <div class="col-sm-12 col-md-4 col-lg-4">
+            <div class="p-3 p-md-4 rounded-4 shadow-sm bg-white h-100">
+              <h3 class="h5">Three-Column Section (col-lg-4)</h3>
+              <p class="mb-0">Grid responsive with <code>col-*</code> classes.</p>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-4 col-lg-4">
+            <div class="p-3 p-md-4 rounded-4 shadow-sm bg-light h-100">
+              <h3 class="h5">Middle</h3>
+              <p class="mb-0">Consistent spacing with <code>m-*</code> and <code>p-*</code> utilities.</p>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-4 col-lg-4">
+            <div class="p-3 p-md-4 rounded-4 shadow-sm bg-white h-100">
+              <h3 class="h5">Right</h3>
+              <p class="mb-0">No custom margins/padding — only utilities.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Task 6: Buttons & Button Group -->
+    <section class="py-4 bg-body-tertiary">
+      <div class="container">
+        <h2 class="h4 mb-3">Buttons</h2>
+        <div class="d-flex flex-wrap gap-2">
+          <button class="btn btn-primary btn-lg" type="button">Primary lg</button>
+          <button class="btn btn-secondary" type="button">Secondary</button>
+          <button class="btn btn-outline-success btn-sm" type="button">Outline success sm</button>
+          <div class="btn-group" role="group" aria-label="Example button group">
+            <button type="button" class="btn btn-warning">Left</button>
+            <button type="button" class="btn btn-warning">Middle</button>
+            <button type="button" class="btn btn-warning">Right</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Task 7: Carousel (9 images) -->
+    <section class="py-4">
+      <div class="container">
+        <h2 class="h4 mb-3">Carousel</h2>
+        <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" aria-label="Image showcase">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="6" aria-label="Slide 7"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="7" aria-label="Slide 8"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="8" aria-label="Slide 9"></button>
+          </div>
+          <div class="carousel-inner rounded-4 overflow-hidden">
+            
+    <div class="carousel-item active">
+      <img src="https://picsum.photos/seed/slide1/1200/500" class="d-block w-100" alt="Carousel slide 1">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Slide 1</h5>
+        <p>Sample image 1 from Picsum.</p>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="https://picsum.photos/seed/slide2/1200/500" class="d-block w-100" alt="Carousel slide 2">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Slide 2</h5>
+        <p>Sample image 2 from Picsum.</p>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="https://picsum.photos/seed/slide3/1200/500" class="d-block w-100" alt="Carousel slide 3">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Slide 3</h5>
+        <p>Sample image 3 from Picsum.</p>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="https://picsum.photos/seed/slide4/1200/500" class="d-block w-100" alt="Carousel slide 4">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Slide 4</h5>
+        <p>Sample image 4 from Picsum.</p>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="https://picsum.photos/seed/slide5/1200/500" class="d-block w-100" alt="Carousel slide 5">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Slide 5</h5>
+        <p>Sample image 5 from Picsum.</p>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="https://picsum.photos/seed/slide6/1200/500" class="d-block w-100" alt="Carousel slide 6">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Slide 6</h5>
+        <p>Sample image 6 from Picsum.</p>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="https://picsum.photos/seed/slide7/1200/500" class="d-block w-100" alt="Carousel slide 7">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Slide 7</h5>
+        <p>Sample image 7 from Picsum.</p>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="https://picsum.photos/seed/slide8/1200/500" class="d-block w-100" alt="Carousel slide 8">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Slide 8</h5>
+        <p>Sample image 8 from Picsum.</p>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="https://picsum.photos/seed/slide9/1200/500" class="d-block w-100" alt="Carousel slide 9">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Slide 9</h5>
+        <p>Sample image 9 from Picsum.</p>
+      </div>
+    </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Task 8: Bootstrap Cards in a group -->
+    <section class="py-4 bg-body-tertiary" id="categories">
+      <div class="container">
+        <h2 class="h4 mb-3">Card Group</h2>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col">
+            <div class="card h-100 shadow-sm">
+              <img src="https://picsum.photos/seed/card1/800/600" class="card-img-top" alt="Sample 1">
+              <div class="card-body">
+                <h3 class="card-title h5">Card Title 1</h3>
+                <p class="card-text">This is a Bootstrap card with image, title and text.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 shadow-sm">
+              <img src="https://picsum.photos/seed/card2/800/600" class="card-img-top" alt="Sample 2">
+              <div class="card-body">
+                <h3 class="card-title h5">Card Title 2</h3>
+                <p class="card-text">Placed within a responsive grid using <code>row-cols</code>.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 shadow-sm">
+              <img src="https://picsum.photos/seed/card3/800/600" class="card-img-top" alt="Sample 3">
+              <div class="card-body">
+                <h3 class="card-title h5">Card Title 3</h3>
+                <p class="card-text">Accessible alt text and semantic structure.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Task 9: Responsive Form -->
+    <section class="py-4" id="contact">
+      <div class="container">
+        <h2 class="h4 mb-3">Contact Us</h2>
+        <form class="row g-3" aria-label="Contact form">
+          <div class="col-md-6">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" id="name" class="form-control" placeholder="Your name" required>
+          </div>
+          <div class="col-md-6">
+            <label for="email" class="form-label">Email</label>
+            <div class="input-group">
+              <span class="input-group-text" id="email-addon">@</span>
+              <input type="email" id="email" class="form-control" placeholder="you@example.com" aria-describedby="email-addon" required>
+            </div>
+          </div>
+          <div class="col-12">
+            <label for="topic" class="form-label">Topic</label>
+            <select id="topic" class="form-select">
+              <option>General</option>
+              <option>Support</option>
+              <option>Partnership</option>
+            </select>
+          </div>
+          <fieldset class="col-12">
+            <legend class="col-form-label pt-0">Subscribe</legend>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="sub" id="subYes" checked>
+              <label class="form-check-label" for="subYes">Yes</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="sub" id="subNo">
+              <label class="form-check-label" for="subNo">No</label>
+            </div>
+          </fieldset>
+          <div class="col-12">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="agree" required>
+              <label class="form-check-label" for="agree">I agree to the terms</label>
+            </div>
+          </div>
+          <div class="col-12">
+            <button class="btn btn-primary" type="submit">Send</button>
+            <button class="btn btn-secondary" type="reset">Reset</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-top py-4">
+    <div class="container text-center small">
+      <p class="mb-0">Team: <strong>Your Team Name</strong> — Members: <em>Replace with names here</em>.</p>
+      <p class="mb-0">Built with Bootstrap 5.3 grid & utilities.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script>
+    // Build carousel items (9 slides)
+  </script>
+</body>
+</html>
